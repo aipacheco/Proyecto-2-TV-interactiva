@@ -1,0 +1,23 @@
+body {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+}
+div {
+  border: 1px solid red;
+}
+.row{
+    border: 1px solid blue;
+}
+.screen {
+  width: 85em;
+  height: 40em;
+  background-color: black;
+}
+.remote {
+  width: 20em;
+  height: 40em;
+  background-color: rgb(29, 29, 30);
+}
+

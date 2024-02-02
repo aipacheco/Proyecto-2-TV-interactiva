@@ -9,8 +9,8 @@ div {
 }
 
 .screen {
-  width: 70em;
-  height: 40em;
+  /* width: 90em;
+  height: 40em; */
   background-color: rgb(37, 37, 37);
 }
 .remote {

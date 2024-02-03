@@ -12,23 +12,23 @@ let power = document.getElementById("power")
 power.addEventListener("click", (e) => {
   if (!encendido) {
     power.classList.remove("btn-danger")
-    power.classList.add("btn-success")
     encendido = true
-    screen.classList.add("c1")
+    //console.log(encendido, "en el boton")
   } else {
-    encendido = false
-    console.log(encendido)
+   encendido = false
+   console.log(encendido)
     power.classList.add("btn-danger")
-    screen.classList.remove(screen.classList[screen.classList.length - 1])
-    screen.classList.add("c0")
+   screen.classList.remove(screen.classList[screen.classList.length - 1])
+   screen.classList.add("c0")
   }
 })
 
+
 padNum.map((button) => {
-  button.addEventListener("click", (e) => {
-    if (encendido == true) {
-      screen.classList.remove(screen.classList[screen.classList.length - 1])
-      screen.classList.add("c" + e.target.id.slice(-1))
-    }
-  })
-})
+    button.addEventListener("click", (e) => {
+        if (encendido == true) {
+            screen.classList.remove(screen.classList[screen.classList.length - 1]);
+            screen.classList.add("c" + e.target.id.slice(-1));
+        }
+    });
+});

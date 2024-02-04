@@ -97,10 +97,8 @@ volUp.addEventListener("click", (e) => {
     if (volumenActual >= 1 && volumenActual < 30) {
       volumen.classList.remove("hidden")
       volumenActual += 1
+      console.log(volumenActual)
       volumen.innerHTML = volumenActual
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
     }
   }
 })
@@ -112,9 +110,6 @@ volDown.addEventListener("click", (e) => {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
     }
   }
 })

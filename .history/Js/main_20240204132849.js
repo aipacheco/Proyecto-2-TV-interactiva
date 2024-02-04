@@ -78,11 +78,11 @@ chanDown.addEventListener("click", (e) => {
     let canalAnterior = parseInt(canalActual.innerHTML)
     let canalAbajo = canalAnterior - 1
 
-    if (canalAbajo >= 1) {
+    if(canalAbajo >= 1){
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
       canalActual.innerHTML = canalAbajo
-    } else {
+    }else{
       canalAbajo = 9
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
@@ -91,30 +91,11 @@ chanDown.addEventListener("click", (e) => {
   }
 })
 
-volUp.addEventListener("click", (e) => {
-  if (encendido) {
-    let volumenActual = parseInt(volumen.innerHTML)
-    if (volumenActual >= 1 && volumenActual < 30) {
-      volumen.classList.remove("hidden")
-      volumenActual += 1
-      volumen.innerHTML = volumenActual
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
-    }
-  }
-})
+volDown.addEventListener("click" , (e) =>{
+ if(encendido){
+let volumenActual = parseInt(volumen.innerHTML)
 
-volDown.addEventListener("click", (e) => {
-  if (encendido) {
-    let volumenAhora = parseInt(volumen.innerHTML)
-    if (volumenAhora <= 30 && volumenAhora > 1) {
-      volumen.classList.remove("hidden")
-      volumenAhora -= 1
-      volumen.innerHTML = volumenAhora
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
-    }
-  }
+ }
+
+
 })

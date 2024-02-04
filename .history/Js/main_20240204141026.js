@@ -98,9 +98,7 @@ volUp.addEventListener("click", (e) => {
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
+      setTimeout(3s)
     }
   }
 })
@@ -112,9 +110,6 @@ volDown.addEventListener("click", (e) => {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
     }
   }
 })

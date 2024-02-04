@@ -97,24 +97,15 @@ volUp.addEventListener("click", (e) => {
     if (volumenActual >= 1 && volumenActual < 30) {
       volumen.classList.remove("hidden")
       volumenActual += 1
+      console.log(volumenActual)
       volumen.innerHTML = volumenActual
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
     }
   }
 })
 
-volDown.addEventListener("click", (e) => {
-  if (encendido) {
+volDown.addEventListener("click", (e)=>{
+  if(encendido){
     let volumenAhora = parseInt(volumen.innerHTML)
-    if (volumenAhora <= 30 && volumenAhora > 1) {
-      volumen.classList.remove("hidden")
-      volumenAhora -= 1
-      volumen.innerHTML = volumenAhora
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
-    }
+    if(volumenAhora)
   }
 })

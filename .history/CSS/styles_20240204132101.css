@@ -88,13 +88,15 @@ div {
 .hidden{
   visibility: hidden;
 }
-#volume{
-  margin-top: 6em;
-  font-size: 3em;
-  color: chartreuse;
-}
+
 .netflix{
   background-image: url(https://tenor.com/bA9FP.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  
+}
+.volume{
+  margin-top: 5em;
+  font-size: 5em;
+  color: chartreuse;
 }

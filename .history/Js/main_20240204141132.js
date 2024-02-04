@@ -112,9 +112,6 @@ volDown.addEventListener("click", (e) => {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
-      setTimeout(() => {
-        volumen.classList.add("hidden");
-      }, 3000);
     }
   }
 })

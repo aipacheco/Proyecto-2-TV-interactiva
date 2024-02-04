@@ -26,7 +26,6 @@ power.addEventListener("click", (e) => {
     encendido = false
     power.classList.add("btn-danger")
     canalActual.classList.add("hidden")
-    mutear.classList.add("hidden")
     screen.classList.remove(screen.classList[screen.classList.length - 1])
     screen.classList.add("c0")
   }
@@ -42,50 +41,16 @@ padNum.map((button) => {
   })
 })
 
-mute.addEventListener("click", (e) => {
-  if (encendido == true) {
-    if (!muteado) {
-      mutear.classList.remove("hidden")
-      muteado = true
-    } else {
-      mutear.classList.add("hidden")
-      muteado = false
-    }
-  }
+mute.addEventListener("click" , (e) =>{
+  console.log("en el boton")
+  
 })
 
-chanUp.addEventListener("click", (e) => {
-  if (encendido == true) {
-    let canalViejo = parseInt(canalActual.innerHTML)
-    let canalArriba = canalViejo + 1
 
-    if (canalArriba <= 9) {
-      screen.classList.remove("c" + canalViejo)
-      screen.classList.add("c" + canalArriba)
-      canalActual.innerHTML = canalArriba
-    } else {
-      canalArriba = 1
-      screen.classList.remove("c" + canalViejo)
-      screen.classList.add("c" + canalArriba)
-      canalActual.innerHTML = canalArriba
-    }
-  }
-})
+if(encendido == true){
+  console.log("hola wey")
+  mute.classList.remove("hidden")
 
-chanDown.addEventListener("click", (e) => {
-  if (encendido) {
-    let canalAnterior = parseInt(canalActual.innerHTML)
-    let canalAbajo = canalAnterior - 1
-
-    if(canalAbajo >= 1){
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }else{
-      canalAbajo = 9
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }
-  }
-})
+}else{
+console.log("no es aqui")
+}

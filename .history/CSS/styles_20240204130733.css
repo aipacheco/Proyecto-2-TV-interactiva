@@ -12,7 +12,7 @@ div {
 #screen {
   width: 80em;
   height: 45em;
-  border: 1em solid black
+  border
 }
 .remote {
   background-color: rgb(65, 65, 65);
@@ -87,11 +87,4 @@ div {
 }
 .hidden{
   visibility: hidden;
-}
-
-.netflix{
-  background-image: url(https://tenor.com/bA9FP.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  
 }

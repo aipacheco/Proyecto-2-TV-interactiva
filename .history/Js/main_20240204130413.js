@@ -85,7 +85,7 @@ chanDown.addEventListener("click", (e) => {
       canalAbajo = 9
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
+      canalActual.innerHTML = canalArriba
     }
   }
 })

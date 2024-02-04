@@ -54,8 +54,11 @@ mute.addEventListener("click", (e) => {
   }
 })
 
+
+
 chanUp.addEventListener("click", (e) => {
   if (encendido == true) {
+
     let canalViejo = parseInt(canalActual.innerHTML)
     let canalArriba = canalViejo + 1
 
@@ -72,20 +75,11 @@ chanUp.addEventListener("click", (e) => {
   }
 })
 
-chanDown.addEventListener("click", (e) => {
-  if (encendido) {
-    let canalAnterior = parseInt(canalActual.innerHTML)
-    let canalAbajo = canalAnterior - 1
+chanDown.addEventListener("click", (e) =>{
+if(encendido){
+let canalAnterior = parseInt(canalActual.innerHTML)
+let canalAbajo = canal
 
-    if(canalAbajo >= 1){
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }else{
-      canalAbajo = 9
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }
-  }
+}
+
 })

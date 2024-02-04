@@ -77,15 +77,10 @@ chanDown.addEventListener("click", (e) => {
     let canalAnterior = parseInt(canalActual.innerHTML)
     let canalAbajo = canalAnterior - 1
 
-    if(canalAbajo >= 1){
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }else{
-      canalAbajo = 9
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
+    if(canalAbajo >= 9){
+      screen.classList.remove("c" + canalViejo)
+      screen.classList.add("c" + canalArriba)
+      canalActual.innerHTML = canalArriba
     }
   }
 })

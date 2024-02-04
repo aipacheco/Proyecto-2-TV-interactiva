@@ -47,7 +47,8 @@ mute.addEventListener("click", (e) => {
     if (!muteado) {
       mutear.classList.remove("hidden")
       muteado = true
-    } else {
+    }
+    else {
       mutear.classList.add("hidden")
       muteado = false
     }
@@ -55,37 +56,7 @@ mute.addEventListener("click", (e) => {
 })
 
 chanUp.addEventListener("click", (e) => {
-  if (encendido == true) {
-    let canalViejo = parseInt(canalActual.innerHTML)
-    let canalArriba = canalViejo + 1
-
-    if (canalArriba <= 9) {
-      screen.classList.remove("c" + canalViejo)
-      screen.classList.add("c" + canalArriba)
-      canalActual.innerHTML = canalArriba
-    } else {
-      canalArriba = 1
-      screen.classList.remove("c" + canalViejo)
-      screen.classList.add("c" + canalArriba)
-      canalActual.innerHTML = canalArriba
-    }
-  }
-})
-
-chanDown.addEventListener("click", (e) => {
-  if (encendido) {
-    let canalAnterior = parseInt(canalActual.innerHTML)
-    let canalAbajo = canalAnterior - 1
-
-    if(canalAbajo >= 1){
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }else{
-      canalAbajo = 9
-      screen.classList.remove("c" + canalAnterior)
-      screen.classList.add("c" + canalAbajo)
-      canalActual.innerHTML = canalAbajo
-    }
-  }
+if (encendido == true) {
+console.log(canalActual.innerHTML)
+}
 })

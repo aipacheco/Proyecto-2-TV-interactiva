@@ -75,7 +75,7 @@ div {
 }
 
 #canalActual{
-  font-size: 5em;
+  font-size: 8em;
   padding-left: 0.5em;
   color: chartreuse;
 }
@@ -89,12 +89,12 @@ div {
   visibility: hidden;
 }
 #volume{
-  margin-top: 9em;
+  margin-top: 6em;
   font-size: 3em;
   color: chartreuse;
 }
 .netflix{
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZlNno3ZzNicHk0M216azM3d3V2NWI1YTZsdm9saThneDBqeWpvOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JnvHE3lTHPr3WrSsrl/giphy.gif);
+  background-image: url(https://tenor.com/bA9FP.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }

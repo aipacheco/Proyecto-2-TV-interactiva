@@ -11,10 +11,15 @@ let mutear = document.getElementById("mutear")
 let volumen = document.getElementById("volume")
 let netflix = document.getElementById("netflix")
 
+
 let encendido = false
 let muteado = false
 
+
+
 let padNum = Array.from(numbers)
+
+
 
 power.addEventListener("click", (e) => {
   if (!encendido) {

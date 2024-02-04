@@ -51,9 +51,11 @@ mute.addEventListener("click", (e) => {
     if (!muteado) {
       mutear.classList.remove("hidden")
       muteado = true
+      volumen.innerHTML = 0
     } else {
       mutear.classList.add("hidden")
       muteado = false
+      volumen.innerHTML = 
     }
   }
 })

@@ -51,6 +51,7 @@ mute.addEventListener("click", (e) => {
     if (!muteado) {
       mutear.classList.remove("hidden")
       muteado = true
+    
     } else {
       mutear.classList.add("hidden")
       muteado = false

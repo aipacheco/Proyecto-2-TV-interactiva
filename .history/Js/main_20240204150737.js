@@ -10,11 +10,17 @@ let mute = document.getElementById("mute")
 let mutear = document.getElementById("mutear")
 let volumen = document.getElementById("volume")
 let netflix = document.getElementById("netflix")
+let fecha = new Date()
+let hora = new Datetime
 
 let encendido = false
 let muteado = false
 
+let fechaFinal = fecha.toLocaleDateString("es-ES")
+
 let padNum = Array.from(numbers)
+
+console.log(fechaFinal)
 
 power.addEventListener("click", (e) => {
   if (!encendido) {

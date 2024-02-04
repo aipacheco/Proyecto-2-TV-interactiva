@@ -10,9 +10,12 @@ let mute = document.getElementById("mute")
 let mutear = document.getElementById("mutear")
 let volumen = document.getElementById("volume")
 let netflix = document.getElementById("netflix")
+let fecha = new Date()
 
 let encendido = false
 let muteado = false
+
+let fechaFinal = fecha.toLocaleDateString
 
 let padNum = Array.from(numbers)
 

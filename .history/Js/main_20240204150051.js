@@ -109,7 +109,7 @@ volUp.addEventListener("click", (e) => {
 })
 
 volDown.addEventListener("click", (e) => {
-  if (encendido && !muteado) {
+  if (encendido ) {
     let volumenAhora = parseInt(volumen.innerHTML)
     if (volumenAhora <= 30 && volumenAhora > 1) {
       volumen.classList.remove("hidden")

@@ -9,7 +9,6 @@ let canalActual = document.getElementById("canalActual")
 let mute = document.getElementById("mute")
 let mutear = document.getElementById("mutear")
 let volumen = document.getElementById("volume")
-let netflix = document.getElementById("netflix")
 
 let encendido = false
 let muteado = false
@@ -37,8 +36,6 @@ power.addEventListener("click", (e) => {
 padNum.map((button) => {
   button.addEventListener("click", (e) => {
     if (encendido == true) {
-      screen.classList.remove("netflix")
-      canalActual.classList.remove("hidden")
       screen.classList.remove(screen.classList[screen.classList.length - 1])
       screen.classList.add("c" + e.target.id.slice(-1))
       canalActual.innerHTML = e.target.id.slice(-1)
@@ -67,11 +64,18 @@ chanUp.addEventListener("click", (e) => {
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
       canalActual.innerHTML = canalArriba
+      setTimeout(() => {
+        canalActual.classList.add("hidden");
+      }, 3000);
+
     } else {
       canalArriba = 1
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
       canalActual.innerHTML = canalArriba
+      setTimeout(() => {
+        canalActual.classList.add("hidden");
+      }, 3000);
     }
   }
 })
@@ -95,36 +99,29 @@ chanDown.addEventListener("click", (e) => {
 })
 
 volUp.addEventListener("click", (e) => {
-  if (encendido && !muteado) {
+  if (encendido) {
     let volumenActual = parseInt(volumen.innerHTML)
     if (volumenActual >= 1 && volumenActual < 30) {
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
       setTimeout(() => {
-        volumen.classList.add("hidden")
-      }, 3000)
+        volumen.classList.add("hidden");
+      }, 3000);
     }
   }
 })
 
 volDown.addEventListener("click", (e) => {
-  if (encendido && !muteado) {
+  if (encendido) {
     let volumenAhora = parseInt(volumen.innerHTML)
     if (volumenAhora <= 30 && volumenAhora > 1) {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
       setTimeout(() => {
-        volumen.classList.add("hidden")
-      }, 3000)
+        volumen.classList.add("hidden");
+      }, 3000);
     }
-  }
-})
-
-netflix.addEventListener("click", (e) => {
-  if (encendido) {
-    canalActual.classList.add("hidden")
-    screen.classList.add("netflix")
   }
 })

@@ -80,9 +80,7 @@ div {
 }
 
 #mute{
-  font-size: 5em;
-  padding-right: 0.2em;
-  color: chartreuse;
+  
 }
 .hidden{
   visibility: hidden;

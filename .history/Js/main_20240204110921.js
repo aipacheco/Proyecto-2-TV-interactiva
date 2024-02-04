@@ -6,10 +6,8 @@ let volDown = document.getElementById("volDown")
 let chanUp = document.getElementById("chanUp")
 let chanDown = document.getElementById("chanDown")
 let canalActual = document.getElementById("canalActual")
-let mute = document.getElementById("mute")
 
 let encendido = false
-let muteado = false
 
 let padNum = Array.from(numbers)
 
@@ -21,6 +19,7 @@ power.addEventListener("click", (e) => {
     screen.classList.add("c1")
     canalActual.classList.remove("hidden")
     canalActual.innerHTML = 1
+    console.log(canalActual)
   } else {
     encendido = false
     power.classList.add("btn-danger")
@@ -39,13 +38,3 @@ padNum.map((button) => {
     }
   })
 })
-
-mute.addEventListener("click" , (e =>{
-  if(!muteado){
-
-  }else{
-    
-  }
-}))
-
-

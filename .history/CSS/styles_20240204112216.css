@@ -27,7 +27,7 @@ div {
 }
 
 .c2 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtjMms1dW5mN2ZlNmZiaGIwZTA0b2wzdzRzOXRyZTJlcmVkanVncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rn8t5GrakF5qE/giphy.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFjcDI2N2FnM3RkanVmMmF0bmdna3J4cHZ5M3JmNmRwbTZjeDJmMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MelmaQaOnBDsk/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -79,11 +79,6 @@ div {
   color: chartreuse;
 }
 
-#mute{
-  font-size: 5em;
-  padding-right: 0.2em;
-  color: chartreuse;
-}
 .hidden{
   visibility: hidden;
 }

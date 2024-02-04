@@ -21,18 +21,18 @@ div {
   background-color: rgb(0, 0, 0);
 }
 .c1 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3hhOGlxZml2bzhzdHZtdHBvMWR6YjllNXR4cnNyMGliem1oaXBzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KwU7HpvgpMrOE/giphy.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnFqb2N3M3ZibGdyc3hvOTA1Y212Z2M5M3FiMDFicXY3bmE0NXR2NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6Gx9moCgs1pUuk/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .c2 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtjMms1dW5mN2ZlNmZiaGIwZTA0b2wzdzRzOXRyZTJlcmVkanVncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rn8t5GrakF5qE/giphy.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGQ1dnQ3azdqenc2NjQ4YzExamIweXlwemhuYjEwMTVwcGZmZGQ0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiTnxL24KsmBWUybe/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .c3 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3VjeHpzbmwybWJibHMzbWs4M21haGFuM2h6cXo4OXQ0djFpMG55bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7mQIMcDow8SGEGbe/giphy.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHhjZmo1cjFtdjAwNzRiMTV3cXdraGk5OXBkNzBja2NrYm9jNWE3bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3BuQWTrTUfi2UTzfRy/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -44,7 +44,7 @@ div {
 }
 
 .c5 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGxkOXVzNWF4YTBsbmxsMHZ1ZGpmemRiMG1oZ3h2MnNjcWMwa283NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rwx5xWqm0NJlkBuRYe/giphy-downsized-large.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdyMjIwdXk4amdpMjcwM3diN3RwaTFiZnl1ZTRrcHFqMmNrb3NnaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sWQLSdcRTcJKU/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -72,18 +72,6 @@ div {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-#canalActual{
-  font-size: 10em;
-  padding-left: 0.5em;
-  color: chartreuse;
-}
-
-#mute{
-  font-size: 5em;
-  padding-right: 0.2em;
-  color: chartreuse;
-}
-.hidden{
-  visibility: hidden;
+.canalActual{
+  text-size: 
 }

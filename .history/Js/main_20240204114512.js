@@ -40,12 +40,6 @@ padNum.map((button) => {
   })
 })
 
-mute.addEventListener("click" , (e =>{
-  if(!muteado){
-
-  }else{
-    
-  }
-}))
-
-
+if(!muteado){
+  
+}

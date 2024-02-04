@@ -6,10 +6,8 @@ let volDown = document.getElementById("volDown")
 let chanUp = document.getElementById("chanUp")
 let chanDown = document.getElementById("chanDown")
 let canalActual = document.getElementById("canalActual")
-let mute = document.getElementById("mute")
 
 let encendido = false
-let muteado = false
 
 let padNum = Array.from(numbers)
 
@@ -39,13 +37,3 @@ padNum.map((button) => {
     }
   })
 })
-
-mute.addEventListener("click" , (e =>{
-  if(!muteado){
-
-  }else{
-    
-  }
-}))
-
-

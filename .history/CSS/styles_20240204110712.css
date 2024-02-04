@@ -21,13 +21,13 @@ div {
   background-color: rgb(0, 0, 0);
 }
 .c1 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3hhOGlxZml2bzhzdHZtdHBvMWR6YjllNXR4cnNyMGliem1oaXBzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KwU7HpvgpMrOE/giphy.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnFqb2N3M3ZibGdyc3hvOTA1Y212Z2M5M3FiMDFicXY3bmE0NXR2NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6Gx9moCgs1pUuk/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .c2 {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtjMms1dW5mN2ZlNmZiaGIwZTA0b2wzdzRzOXRyZTJlcmVkanVncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rn8t5GrakF5qE/giphy.gif);
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGQ1dnQ3azdqenc2NjQ4YzExamIweXlwemhuYjEwMTVwcGZmZGQ0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiTnxL24KsmBWUybe/giphy.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -75,15 +75,10 @@ div {
 
 #canalActual{
   font-size: 10em;
-  padding-left: 0.5em;
+  margin-left: ;
   color: chartreuse;
 }
 
-#mute{
-  font-size: 5em;
-  padding-right: 0.2em;
-  color: chartreuse;
-}
 .hidden{
   visibility: hidden;
 }

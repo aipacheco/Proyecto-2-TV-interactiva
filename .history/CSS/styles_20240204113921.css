@@ -73,17 +73,12 @@ div {
   background-size: cover;
 }
 
-#canalActual{
+#canalActual
   font-size: 10em;
   padding-left: 0.5em;
   color: chartreuse;
 }
 
-#mute{
-  font-size: 5em;
-  padding-right: 0.2em;
-  color: chartreuse;
-}
 .hidden{
   visibility: hidden;
 }

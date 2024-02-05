@@ -88,6 +88,7 @@ mute.addEventListener("click", (e) => {
 
 chanUp.addEventListener("click", (e) => {
   if (encendido) {
+
     canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")

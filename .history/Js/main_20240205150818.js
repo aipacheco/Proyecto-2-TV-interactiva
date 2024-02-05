@@ -15,7 +15,7 @@ let time = document.getElementById("time")
 let encendido = false
 let muteado = false
 let padNum = Array.from(numbers)
-let netflixAndChill = false
+let netflix
 
 const addZero = (i) => {
   if (i < 10) {
@@ -41,7 +41,7 @@ power.addEventListener("click", (e) => {
     setTimeout(() => {
       time.classList.add("hidden")
       canalActual.classList.add("hidden")
-    }, 5000)
+    }, 3000)
     screen.classList.add("c1")
     canalActual.classList.remove("hidden")
     canalActual.innerHTML = 1
@@ -60,7 +60,6 @@ power.addEventListener("click", (e) => {
 padNum.map((button) => {
   button.addEventListener("click", (e) => {
     if (encendido) {
-      netflixAndChill = false
       screen.classList.remove("netflix")
       canalActual.classList.remove("hidden")
       screen.classList.remove(screen.classList[screen.classList.length - 1])
@@ -71,7 +70,7 @@ padNum.map((button) => {
       setTimeout(() => {
         canalActual.classList.add("hidden")
         time.classList.add("hidden")
-      }, 5000)
+      }, 3000)
     }
   })
 })
@@ -89,7 +88,8 @@ mute.addEventListener("click", (e) => {
 })
 
 chanUp.addEventListener("click", (e) => {
-  if (encendido && !netflixAndChill) {
+  if (encendido) {
+
     canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
@@ -98,23 +98,25 @@ chanUp.addEventListener("click", (e) => {
     setTimeout(() => {
       canalActual.classList.add("hidden")
       time.classList.add("hidden")
-    }, 5000)
-
+    }, 3000)
+    
     if (canalArriba <= 9) {
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
       canalActual.innerHTML = canalArriba
+
     } else {
       canalArriba = 1
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
       canalActual.innerHTML = canalArriba
+
     }
   }
 })
 
 chanDown.addEventListener("click", (e) => {
-  if (encendido && !netflixAndChill) {
+  if (encendido) {
     canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
@@ -123,63 +125,47 @@ chanDown.addEventListener("click", (e) => {
     setTimeout(() => {
       canalActual.classList.add("hidden")
       time.classList.add("hidden")
-    }, 5000)
+    }, 3000)
 
     if (canalAbajo >= 1) {
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
       canalActual.innerHTML = canalAbajo
+      
     } else {
       canalAbajo = 9
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
       canalActual.innerHTML = canalAbajo
+      
     }
   }
 })
 
 volUp.addEventListener("click", (e) => {
-  let volumenActual = parseInt(volumen.innerHTML)
   if (encendido && !muteado) {
+    let volumenActual = parseInt(volumen.innerHTML)
     if (volumenActual >= 1 && volumenActual < 30) {
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
       setTimeout(() => {
         volumen.classList.add("hidden")
-      }, 5000)
-    }
-  }else if (encendido && muteado){
-    muteado = false
-    mutear.classList.add("hidden")
-    if (volumenActual >= 0 && volumenActual < 30) {
-      volumen.classList.remove("hidden")
-      volumenActual += 1
-      volumen.innerHTML = volumenActual
-      setTimeout(() => {
-        volumen.classList.add("hidden")
-      }, 5000)
+      }, 3000)
     }
   }
-
-
-  
 })
 
 volDown.addEventListener("click", (e) => {
   if (encendido && !muteado) {
     let volumenAhora = parseInt(volumen.innerHTML)
-    if (volumenAhora <= 30 && volumenAhora >= 1) {
+    if (volumenAhora <= 30 && volumenAhora > 1) {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
       setTimeout(() => {
         volumen.classList.add("hidden")
-      }, 5000)
-    }
-    if (volumenAhora == 0) {
-      mutear.classList.remove("hidden")
-      muteado = true
+      }, 3000)
     }
   }
 })
@@ -190,9 +176,8 @@ netflix.addEventListener("click", (e) => {
     time.classList.remove("hidden")
     setTimeout(() => {
       time.classList.add("hidden")
-    }, 5000)
+    }, 3000)
     canalActual.classList.add("hidden")
     screen.classList.add("netflix")
-    netflixAndChill = true
   }
 })

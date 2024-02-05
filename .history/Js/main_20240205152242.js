@@ -139,20 +139,9 @@ chanDown.addEventListener("click", (e) => {
 })
 
 volUp.addEventListener("click", (e) => {
-  let volumenActual = parseInt(volumen.innerHTML)
   if (encendido && !muteado) {
+    let volumenActual = parseInt(volumen.innerHTML)
     if (volumenActual >= 1 && volumenActual < 30) {
-      volumen.classList.remove("hidden")
-      volumenActual += 1
-      volumen.innerHTML = volumenActual
-      setTimeout(() => {
-        volumen.classList.add("hidden")
-      }, 5000)
-    }
-  }else if (encendido && muteado){
-    muteado = false
-    mutear.classList.add("hidden")
-    if (volumenActual >= 0 && volumenActual < 30) {
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
@@ -162,8 +151,9 @@ volUp.addEventListener("click", (e) => {
     }
   }
 
-
-  
+    muteado = false
+    mutear.classList.add("hidden")
+  }
 })
 
 volDown.addEventListener("click", (e) => {

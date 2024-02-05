@@ -141,6 +141,7 @@ chanDown.addEventListener("click", (e) => {
 volUp.addEventListener("click", (e) => {
   let volumenActual = parseInt(volumen.innerHTML)
   if (encendido && !muteado) {
+   
     if (volumenActual >= 1 && volumenActual < 30) {
       volumen.classList.remove("hidden")
       volumenActual += 1

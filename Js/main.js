@@ -10,17 +10,31 @@ let mute = document.getElementById("mute")
 let mutear = document.getElementById("mutear")
 let volumen = document.getElementById("volume")
 let netflix = document.getElementById("netflix")
+let time = document.getElementById("time")
 
 let encendido = false
 let muteado = false
 
 let padNum = Array.from(numbers)
 
+const HORA_ACTUAL = () => {
+  let fecha = new Date()
+  let hora = fecha.getHours()
+  let minutos = fecha.getMinutes()
+  let resultado = `${hora}:${minutos}`
+  return resultado
+}
+
 power.addEventListener("click", (e) => {
   if (!encendido) {
     power.classList.remove("btn-danger")
     power.classList.add("btn-success")
     encendido = true
+    time.innerHTML = HORA_ACTUAL()
+    time.classList.remove("hidden")
+    setTimeout(() => {
+      time.classList.add("hidden")
+    }, 3000)
     screen.classList.add("c1")
     canalActual.classList.remove("hidden")
     canalActual.innerHTML = 1
@@ -29,6 +43,8 @@ power.addEventListener("click", (e) => {
     power.classList.add("btn-danger")
     canalActual.classList.add("hidden")
     mutear.classList.add("hidden")
+    time.classList.add("hidden")
+    screen.classList.remove("netflix")
     screen.classList.remove(screen.classList[screen.classList.length - 1])
     screen.classList.add("c0")
   }
@@ -42,6 +58,11 @@ padNum.map((button) => {
       screen.classList.remove(screen.classList[screen.classList.length - 1])
       screen.classList.add("c" + e.target.id.slice(-1))
       canalActual.innerHTML = e.target.id.slice(-1)
+      time.innerHTML = HORA_ACTUAL()
+      time.classList.remove("hidden")
+      setTimeout(() => {
+        time.classList.add("hidden")
+      }, 3000)
     }
   })
 })
@@ -60,9 +81,13 @@ mute.addEventListener("click", (e) => {
 
 chanUp.addEventListener("click", (e) => {
   if (encendido) {
+    time.innerHTML = HORA_ACTUAL()
+    time.classList.remove("hidden")
+    setTimeout(() => {
+      time.classList.add("hidden")
+    }, 3000)
     let canalViejo = parseInt(canalActual.innerHTML)
     let canalArriba = canalViejo + 1
-
     if (canalArriba <= 9) {
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
@@ -78,6 +103,11 @@ chanUp.addEventListener("click", (e) => {
 
 chanDown.addEventListener("click", (e) => {
   if (encendido) {
+    time.innerHTML = HORA_ACTUAL()
+    time.classList.remove("hidden")
+    setTimeout(() => {
+      time.classList.add("hidden")
+    }, 3000)
     let canalAnterior = parseInt(canalActual.innerHTML)
     let canalAbajo = canalAnterior - 1
 
@@ -124,6 +154,11 @@ volDown.addEventListener("click", (e) => {
 
 netflix.addEventListener("click", (e) => {
   if (encendido) {
+    time.innerHTML = HORA_ACTUAL()
+    time.classList.remove("hidden")
+    setTimeout(() => {
+      time.classList.add("hidden")
+    }, 3000)
     canalActual.classList.add("hidden")
     screen.classList.add("netflix")
   }

@@ -14,13 +14,18 @@ let time = document.getElementById("time")
 
 let encendido = false
 let muteado = false
-
 let padNum = Array.from(numbers)
 
+const addZero = (i) => {
+  if (i < 10) {
+    i = "0" + i
+  }
+  return i
+}
 const HORA_ACTUAL = () => {
   let fecha = new Date()
   let hora = fecha.getHours()
-  let minutos = fecha.getMinutes()
+  let minutos = addZero(fecha.getMinutes())
   let resultado = `${hora}:${minutos}`
   return resultado
 }
@@ -38,6 +43,10 @@ power.addEventListener("click", (e) => {
     screen.classList.add("c1")
     canalActual.classList.remove("hidden")
     canalActual.innerHTML = 1
+
+    setTimeout(() => {
+      canalActual.classList.add("hidden")
+    }, 3000)
   } else {
     encendido = false
     power.classList.add("btn-danger")

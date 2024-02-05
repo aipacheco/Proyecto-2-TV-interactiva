@@ -39,14 +39,11 @@ power.addEventListener("click", (e) => {
     time.classList.remove("hidden")
     setTimeout(() => {
       time.classList.add("hidden")
+      canalActual.classList.add("hidden")
     }, 3000)
     screen.classList.add("c1")
     canalActual.classList.remove("hidden")
     canalActual.innerHTML = 1
-
-    setTimeout(() => {
-      canalActual.classList.add("hidden")
-    }, 3000)
   } else {
     encendido = false
     power.classList.add("btn-danger")
@@ -61,7 +58,7 @@ power.addEventListener("click", (e) => {
 
 padNum.map((button) => {
   button.addEventListener("click", (e) => {
-    if (encendido == true) {
+    if (encendido) {
       screen.classList.remove("netflix")
       canalActual.classList.remove("hidden")
       screen.classList.remove(screen.classList[screen.classList.length - 1])
@@ -71,8 +68,6 @@ padNum.map((button) => {
       time.classList.remove("hidden")
       setTimeout(() => {
         canalActual.classList.add("hidden")
-      }, 3000)
-      setTimeout(() => {
         time.classList.add("hidden")
       }, 3000)
     }
@@ -80,7 +75,7 @@ padNum.map((button) => {
 })
 
 mute.addEventListener("click", (e) => {
-  if (encendido == true) {
+  if (encendido) {
     if (!muteado) {
       mutear.classList.remove("hidden")
       muteado = true
@@ -93,12 +88,14 @@ mute.addEventListener("click", (e) => {
 
 chanUp.addEventListener("click", (e) => {
   if (encendido) {
+    canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
     let canalViejo = parseInt(canalActual.innerHTML)
     let canalArriba = canalViejo + 1
     setTimeout(() => {
       canalActual.classList.add("hidden")
+      time.classList.add("hidden")
     }, 3000)
     
     if (canalArriba <= 9) {
@@ -118,15 +115,14 @@ chanUp.addEventListener("click", (e) => {
 
 chanDown.addEventListener("click", (e) => {
   if (encendido) {
+    canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
-    setTimeout(() => {
-      time.classList.add("hidden")
-    }, 3000)
     let canalAnterior = parseInt(canalActual.innerHTML)
     let canalAbajo = canalAnterior - 1
     setTimeout(() => {
       canalActual.classList.add("hidden")
+      time.classList.add("hidden")
     }, 3000)
 
     if (canalAbajo >= 1) {

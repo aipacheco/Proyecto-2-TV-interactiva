@@ -4,8 +4,11 @@ body {
   align-items: center;
 
   margin: 0;
-  padding: 0;
+  padding: e;
   background-color: rgb(209, 209, 209);
+}
+div {
+  border: 1px solid red;
 }
 
 #screen {

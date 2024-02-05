@@ -1,11 +1,13 @@
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: ;
 
   margin: 0;
   padding: 0;
   background-color: rgb(209, 209, 209);
+}
+div {
+  border: 1px solid red;
 }
 
 #screen {

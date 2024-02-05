@@ -11,7 +11,7 @@ div {
 
 #screen {
   width: 80em;
-  height: 45em;
+  height: 43.5em;
   border: 1em solid black
 }
 .remote {
@@ -89,7 +89,7 @@ div {
   visibility: hidden;
 }
 #volume{
-  margin-top: 8.5em;
+  margin-top: 8em;
   font-size: 3em;
   color: chartreuse;
 }

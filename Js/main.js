@@ -70,6 +70,9 @@ padNum.map((button) => {
       time.innerHTML = HORA_ACTUAL()
       time.classList.remove("hidden")
       setTimeout(() => {
+        canalActual.classList.add("hidden")
+      }, 3000)
+      setTimeout(() => {
         time.classList.add("hidden")
       }, 3000)
     }
@@ -92,20 +95,23 @@ chanUp.addEventListener("click", (e) => {
   if (encendido) {
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
-    setTimeout(() => {
-      time.classList.add("hidden")
-    }, 3000)
     let canalViejo = parseInt(canalActual.innerHTML)
     let canalArriba = canalViejo + 1
+    setTimeout(() => {
+      canalActual.classList.add("hidden")
+    }, 3000)
+    
     if (canalArriba <= 9) {
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
       canalActual.innerHTML = canalArriba
+
     } else {
       canalArriba = 1
       screen.classList.remove("c" + canalViejo)
       screen.classList.add("c" + canalArriba)
       canalActual.innerHTML = canalArriba
+
     }
   }
 })
@@ -119,16 +125,21 @@ chanDown.addEventListener("click", (e) => {
     }, 3000)
     let canalAnterior = parseInt(canalActual.innerHTML)
     let canalAbajo = canalAnterior - 1
+    setTimeout(() => {
+      canalActual.classList.add("hidden")
+    }, 3000)
 
     if (canalAbajo >= 1) {
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
       canalActual.innerHTML = canalAbajo
+      
     } else {
       canalAbajo = 9
       screen.classList.remove("c" + canalAnterior)
       screen.classList.add("c" + canalAbajo)
       canalActual.innerHTML = canalAbajo
+      
     }
   }
 })

@@ -101,7 +101,7 @@ mute.addEventListener("click", (e) => {
     if (!muteado) {
       mutear.classList.remove("hidden")
       muteado = true
-      volumen.classList.add("hidden")
+      
     } else {
       mutear.classList.add("hidden")
       muteado = false

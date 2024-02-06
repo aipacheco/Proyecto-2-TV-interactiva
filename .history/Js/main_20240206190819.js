@@ -17,8 +17,6 @@ let time = document.getElementById("time")
 let encendido = false
 let muteado = false
 let netflixAndChill = false
-
-//variable para manejar los diferentes timeouts y que no se pisen entre ellos
 let timeout
 
 //convertimos numbers en un array para trabajar en el
@@ -76,6 +74,7 @@ power.addEventListener("click", (e) => {
 
 
 //eventos para los botones numéricos
+
 padNum.map((button) => {
   button.addEventListener("click", (e) => {
     if (encendido) {

@@ -208,6 +208,7 @@ volDown.addEventListener("click", (e) => {
     if (volumenAhora == 0) {
       mutear.classList.remove("hidden")
       muteado = true
+     
     }
   }
 })

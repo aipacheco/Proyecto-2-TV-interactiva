@@ -27,8 +27,10 @@ The project is responsive, but the screen image does not adjust properly for mob
 ### Instructions to open the web page from VSCode:
 1. Install the Live Server extension (https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 2. Click on "Go Live", a new tab will open in your default browser.
-![go_live](./img/GoLive.PNG)
-3. Enjoy! 😊
+   
+![go_live](./img/GoLive.png)
+
+4. Enjoy! 😊
 
 ##### Alternatively you can visit the link to gitHub Pages:
 

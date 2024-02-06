@@ -19,6 +19,7 @@ let muteado = false
 let netflixAndChill = false
 
 //variable para manejar los diferentes timeouts y que no se pisen entre ellos
+let timeout
 let timeoutVol
 let timeoutChan
 
@@ -74,6 +75,7 @@ power.addEventListener("click", (e) => {
     volumen.classList.add("hidden")
   }
 })
+
 
 //eventos para los botones numéricos
 padNum.map((button) => {
@@ -169,11 +171,11 @@ volUp.addEventListener("click", (e) => {
   let volumenActual = parseInt(volumen.innerHTML)
   if (encendido && !muteado) {
     if (volumenActual >= 1 && volumenActual < 30) {
-      clearTimeout(timeoutVol)
+      clearTimeout(timeout)
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
-      timeoutVol = setTimeout(() => {
+      timeout = setTimeout(() => {
         volumen.classList.add("hidden")
       }, 5000)
     }
@@ -181,11 +183,11 @@ volUp.addEventListener("click", (e) => {
     muteado = false
     mutear.classList.add("hidden")
     if (volumenActual >= 0 && volumenActual < 30) {
-      clearTimeout(timeoutVol)
+      clearTimeout(timeout)
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
-      timeoutVol = setTimeout(() => {
+      timeout = setTimeout(() => {
         volumen.classList.add("hidden")
       }, 5000)
     }
@@ -195,13 +197,13 @@ volUp.addEventListener("click", (e) => {
 //eventos para el botón de volumen -
 volDown.addEventListener("click", (e) => {
   if (encendido && !muteado) {
-    clearTimeout(timeoutVol)
+    clearTimeout(timeout)
     let volumenAhora = parseInt(volumen.innerHTML)
     if (volumenAhora <= 30 && volumenAhora >= 1) {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
-      timeoutVol = setTimeout(() => {
+      timeout = setTimeout(() => {
         volumen.classList.add("hidden")
       }, 5000)
     }

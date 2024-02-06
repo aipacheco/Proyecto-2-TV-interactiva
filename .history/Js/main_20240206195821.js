@@ -19,6 +19,7 @@ let muteado = false
 let netflixAndChill = false
 
 //variable para manejar los diferentes timeouts y que no se pisen entre ellos
+
 let timeoutVol
 let timeoutChan
 
@@ -74,6 +75,7 @@ power.addEventListener("click", (e) => {
     volumen.classList.add("hidden")
   }
 })
+
 
 //eventos para los botones numéricos
 padNum.map((button) => {

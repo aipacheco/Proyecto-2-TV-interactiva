@@ -19,8 +19,8 @@ let muteado = false
 let netflixAndChill = false
 
 //variable para manejar los diferentes timeouts y que no se pisen entre ellos
-let timeoutVol
-let timeoutChan
+let timeout
+let timeout
 
 //convertimos numbers en un array para trabajar en el
 let padNum = Array.from(numbers)
@@ -75,20 +75,21 @@ power.addEventListener("click", (e) => {
   }
 })
 
+
 //eventos para los botones numéricos
 padNum.map((button) => {
   button.addEventListener("click", (e) => {
     if (encendido) {
       netflixAndChill = false
       screen.classList.remove("netflix")
-      clearTimeout(timeoutChan)
+      clearTimeout(timeout)
       canalActual.classList.remove("hidden")
       screen.classList.remove(screen.classList[screen.classList.length - 1])
       screen.classList.add("c" + e.target.id.slice(-1))
       canalActual.innerHTML = e.target.id.slice(-1)
       time.innerHTML = HORA_ACTUAL()
       time.classList.remove("hidden")
-      timeoutChan = setTimeout(() => {
+      timeout = setTimeout(() => {
         canalActual.classList.add("hidden")
         time.classList.add("hidden")
       }, 5000)
@@ -113,13 +114,13 @@ mute.addEventListener("click", (e) => {
 //eventos para el botón de canal +
 chanUp.addEventListener("click", (e) => {
   if (encendido && !netflixAndChill) {
-    clearTimeout(timeoutChan)
+    clearTimeout(timeout)
     canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
     let canalViejo = parseInt(canalActual.innerHTML)
     let canalArriba = canalViejo + 1
-    timeoutChan = setTimeout(() => {
+    timeout = setTimeout(() => {
       canalActual.classList.add("hidden")
       time.classList.add("hidden")
     }, 5000)
@@ -140,13 +141,13 @@ chanUp.addEventListener("click", (e) => {
 //eventos para el botón de canal -
 chanDown.addEventListener("click", (e) => {
   if (encendido && !netflixAndChill) {
-    clearTimeout(timeoutChan)
+    clearTimeout(timeout)
     canalActual.classList.remove("hidden")
     time.innerHTML = HORA_ACTUAL()
     time.classList.remove("hidden")
     let canalAnterior = parseInt(canalActual.innerHTML)
     let canalAbajo = canalAnterior - 1
-    timeoutChan = setTimeout(() => {
+    timeout = setTimeout(() => {
       canalActual.classList.add("hidden")
       time.classList.add("hidden")
     }, 5000)
@@ -169,11 +170,11 @@ volUp.addEventListener("click", (e) => {
   let volumenActual = parseInt(volumen.innerHTML)
   if (encendido && !muteado) {
     if (volumenActual >= 1 && volumenActual < 30) {
-      clearTimeout(timeoutVol)
+      clearTimeout(timeout)
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
-      timeoutVol = setTimeout(() => {
+      timeout = setTimeout(() => {
         volumen.classList.add("hidden")
       }, 5000)
     }
@@ -181,11 +182,11 @@ volUp.addEventListener("click", (e) => {
     muteado = false
     mutear.classList.add("hidden")
     if (volumenActual >= 0 && volumenActual < 30) {
-      clearTimeout(timeoutVol)
+      clearTimeout(timeout)
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
-      timeoutVol = setTimeout(() => {
+      timeout = setTimeout(() => {
         volumen.classList.add("hidden")
       }, 5000)
     }
@@ -195,13 +196,13 @@ volUp.addEventListener("click", (e) => {
 //eventos para el botón de volumen -
 volDown.addEventListener("click", (e) => {
   if (encendido && !muteado) {
-    clearTimeout(timeoutVol)
+    clearTimeout(timeout)
     let volumenAhora = parseInt(volumen.innerHTML)
     if (volumenAhora <= 30 && volumenAhora >= 1) {
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
-      timeoutVol = setTimeout(() => {
+      timeout = setTimeout(() => {
         volumen.classList.add("hidden")
       }, 5000)
     }

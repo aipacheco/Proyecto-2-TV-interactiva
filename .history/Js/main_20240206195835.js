@@ -19,6 +19,7 @@ let muteado = false
 let netflixAndChill = false
 
 //variable para manejar los diferentes timeouts y que no se pisen entre ellos
+
 let timeoutVol
 let timeoutChan
 

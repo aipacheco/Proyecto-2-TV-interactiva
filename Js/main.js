@@ -1,3 +1,4 @@
+//variables del html que se van a usar 
 let numbers = document.getElementsByClassName("btn-num")
 let screen = document.getElementById("screen")
 let power = document.getElementById("power")
@@ -12,25 +13,31 @@ let volumen = document.getElementById("volume")
 let netflix = document.getElementById("netflix")
 let time = document.getElementById("time")
 
+//variables booleanas para usar en interruptores
 let encendido = false
 let muteado = false
-let padNum = Array.from(numbers)
 let netflixAndChill = false
 
-const addZero = (i) => {
+//convertimos numbers en un array para trabajar en el
+let padNum = Array.from(numbers)
+
+//función para añadir un 0 en los minutos del 1 al 9
+const ADD_ZERO = (i) => {
   if (i < 10) {
-    i = "0" + i
-  }
+    i = "0" + i}
   return i
 }
+
+//función para crear la hora actual
 const HORA_ACTUAL = () => {
   let fecha = new Date()
   let hora = fecha.getHours()
-  let minutos = addZero(fecha.getMinutes())
+  let minutos = ADD_ZERO(fecha.getMinutes())
   let resultado = `${hora}:${minutos}`
   return resultado
 }
 
+//eventos para el botón On/Off
 power.addEventListener("click", (e) => {
   if (!encendido) {
     power.classList.remove("btn-danger")
@@ -57,6 +64,8 @@ power.addEventListener("click", (e) => {
   }
 })
 
+
+//eventos para los botones numéricos
 padNum.map((button) => {
   button.addEventListener("click", (e) => {
     if (encendido) {
@@ -76,6 +85,7 @@ padNum.map((button) => {
   })
 })
 
+//eventos para el botón de mute
 mute.addEventListener("click", (e) => {
   if (encendido) {
     if (!muteado) {
@@ -88,6 +98,7 @@ mute.addEventListener("click", (e) => {
   }
 })
 
+//eventos para el botón de canal +
 chanUp.addEventListener("click", (e) => {
   if (encendido && !netflixAndChill) {
     canalActual.classList.remove("hidden")
@@ -113,6 +124,7 @@ chanUp.addEventListener("click", (e) => {
   }
 })
 
+//eventos para el botón de canal -
 chanDown.addEventListener("click", (e) => {
   if (encendido && !netflixAndChill) {
     canalActual.classList.remove("hidden")
@@ -138,6 +150,7 @@ chanDown.addEventListener("click", (e) => {
   }
 })
 
+//eventos para el botón de volumen +
 volUp.addEventListener("click", (e) => {
   let volumenActual = parseInt(volumen.innerHTML)
   if (encendido && !muteado) {
@@ -161,11 +174,9 @@ volUp.addEventListener("click", (e) => {
       }, 5000)
     }
   }
-
-
-  
 })
 
+//eventos para el botón de volumen -
 volDown.addEventListener("click", (e) => {
   if (encendido && !muteado) {
     let volumenAhora = parseInt(volumen.innerHTML)
@@ -184,6 +195,7 @@ volDown.addEventListener("click", (e) => {
   }
 })
 
+//eventos para el botón de netflix
 netflix.addEventListener("click", (e) => {
   if (encendido) {
     time.innerHTML = HORA_ACTUAL()

@@ -10,6 +10,7 @@ let canalActual = document.getElementById("canalActual")
 let mute = document.getElementById("mute")
 let mutear = document.getElementById("mutear")
 let volumen = document.getElementById("volume")
+let volumenText = document.getElementById("volumenText")
 let netflix = document.getElementById("netflix")
 let time = document.getElementById("time")
 
@@ -72,6 +73,7 @@ power.addEventListener("click", (e) => {
     screen.classList.remove(screen.classList[screen.classList.length - 1])
     screen.classList.add("c0")
     volumen.classList.add("hidden")
+    volumenText.classList.add("hidden")
   }
 })
 
@@ -103,6 +105,7 @@ mute.addEventListener("click", (e) => {
       mutear.classList.remove("hidden")
       muteado = true
       volumen.classList.add("hidden")
+      volumenText.classList.add("hidden")
     } else {
       mutear.classList.add("hidden")
       muteado = false
@@ -170,10 +173,12 @@ volUp.addEventListener("click", (e) => {
   if (encendido && !muteado) {
     if (volumenActual >= 1 && volumenActual < 30) {
       clearTimeout(timeoutVol)
+      volumenText.classList.remove("hidden")
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
       timeoutVol = setTimeout(() => {
+        volumenText.classList.add("hidden")
         volumen.classList.add("hidden")
       }, 5000)
     }
@@ -182,10 +187,12 @@ volUp.addEventListener("click", (e) => {
     mutear.classList.add("hidden")
     if (volumenActual >= 0 && volumenActual < 30) {
       clearTimeout(timeoutVol)
+      volumenText.classList.remove("hidden")
       volumen.classList.remove("hidden")
       volumenActual += 1
       volumen.innerHTML = volumenActual
       timeoutVol = setTimeout(() => {
+        volumenText.classList.add("hidden")
         volumen.classList.add("hidden")
       }, 5000)
     }
@@ -198,10 +205,12 @@ volDown.addEventListener("click", (e) => {
     clearTimeout(timeoutVol)
     let volumenAhora = parseInt(volumen.innerHTML)
     if (volumenAhora <= 30 && volumenAhora >= 1) {
+      volumenText.classList.remove("hidden")
       volumen.classList.remove("hidden")
       volumenAhora -= 1
       volumen.innerHTML = volumenAhora
       timeoutVol = setTimeout(() => {
+        volumenText.classList.add("hidden")
         volumen.classList.add("hidden")
       }, 5000)
     }

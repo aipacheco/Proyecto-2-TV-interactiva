@@ -96,9 +96,17 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.42);
 }
 #time{
+  margin-top: 1em;
   font-size: 1.5em;
   color: chartreuse;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.42);
+}
+#volumenText{
+  margin-top: 8em;
+  font-size: 3em;
+  color: chartreuse;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.42);
+
 }
 .netflix{
   background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZlNno3ZzNicHk0M216azM3d3V2NWI1YTZsdm9saThneDBqeWpvOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JnvHE3lTHPr3WrSsrl/giphy.gif);
@@ -109,4 +117,7 @@ body {
   background-image: url(https://cdn.dribbble.com/users/3088605/screenshots/15773826/media/044359421ff54f46abfb6faad4a928ae.gif);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.btn-num{
+  margin: 1px
 }

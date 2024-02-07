@@ -15,9 +15,7 @@
   <body>
     <div class="container m-5">
       <div class="row">
-        <div
-          class="col-12 col-md-9 col-lg-10 d-flex justify-content-center"
-        >
+        <div class="col-12 col-md-9 col-lg-10 d-flex justify-content-center">
           <div id="screen" class="c0">
             <div class="row m-2">
               <div class="col-6">
@@ -32,9 +30,24 @@
                 </div>
               </div>
             </div>
-            <div class="row m-5">
-              <div id="volume" class="container text-center hidden">1</div>
-              <div id="time" class="container d-flex justify-content-end hidden">  </div>
+
+              <div class="container">
+                <div class="row">
+                <div class="col-6">
+                  <div id="volumenText" class="container text-end hidden">
+                    Volumen
+                  </div>
+                </div>
+                <div class="col m-2-6">
+                  <div id="volume" class="container text-start hidden">1</div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  id="time"
+                  class="container d-flex justify-content-end hidden"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
@@ -44,7 +57,7 @@
         >
           <div class="remote">
             <div class="container">
-              <div class="container d-flex justify-content-between mt-2">
+              <div class="container d-flex justify-content-between mt-4">
                 <button id="power" class="btn btn-danger">
                   <i class="fa-solid fa-power-off"></i>
                 </button>
@@ -90,7 +103,6 @@
 
               <div class="container d-flex justify-content-around mt-5 mb-2">
                 <button id="netflix" class="btn btn-danger">Netflix</button>
-
               </div>
             </div>
           </div>
